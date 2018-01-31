@@ -1,10 +1,13 @@
--- This file has been generated from package.yaml by hpack version 0.17.1.
+-- This file has been generated from package.yaml by hpack version 0.21.2.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: cd63fb838e9e40c5bbd0ed9fe7d10b6cbed9c2266a1e5d616047f2b2b9930feb
 
 name:           servant-client-haxl
 version:        0.0.0.0
 synopsis:       Haxl-based client functions for servant APIs
+description:    See README.md
 stability:      alpha
 homepage:       http://github.com/jkarni/servant-client-haxl#readme
 bug-reports:    https://github.com/jkarni/servant-client-haxl/issues
@@ -27,24 +30,26 @@ library
   default-extensions: AutoDeriveTypeable ConstraintKinds DataKinds DefaultSignatures DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable FlexibleContexts FlexibleInstances FunctionalDependencies GADTs KindSignatures MultiParamTypeClasses OverloadedStrings RankNTypes ScopedTypeVariables TypeFamilies TypeOperators
   ghc-options: -Wall
   build-depends:
-      base >= 4.8 && < 4.10
-    , async >= 2.1 && < 2.2
-    , bytestring >= 0.10 && < 0.11
-    , text >= 1 && < 2
-    , servant-client >= 0.11 && < 0.13
-    , servant-client-core >= 0.11 && < 0.13
-    , haxl >= 0.5 && < 0.6
-    , http-client >= 0.5 && < 0.6
-    , http-types >= 0.9 && < 0.10
-    , http-media >= 0.6 && < 0.7
-    , hashable >= 1 && < 2
-    , exceptions >= 0.8 && < 0.9
-    , mtl >= 2.2 && < 2.3
+      async >=2.1 && <2.2
+    , base >=4.8 && <4.11
+    , bytestring >=0.10 && <0.11
+    , exceptions >=0.8 && <0.9
+    , hashable >=1 && <2
+    , haxl >=0.5 && <0.6
+    , http-client >=0.5 && <0.6
+    , http-media >=0.6 && <0.8
+    , http-types >=0.9 && <0.10
+    , mtl >=2.2 && <2.3
+    , servant >=0.11 && <0.13
+    , servant-client >=0.11 && <0.13
+    , servant-client-core >=0.11 && <0.13
+    , text >=1 && <2
   exposed-modules:
       Servant.Client.Haxl
       Servant.Client.Haxl.Internal
       Servant.Client.Haxl.Internal.Client
       Servant.Client.Haxl.Internal.Types
+      Servant.Flatten
   default-language: Haskell2010
 
 test-suite spec
@@ -55,27 +60,28 @@ test-suite spec
   default-extensions: AutoDeriveTypeable ConstraintKinds DataKinds DefaultSignatures DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable FlexibleContexts FlexibleInstances FunctionalDependencies GADTs KindSignatures MultiParamTypeClasses OverloadedStrings RankNTypes ScopedTypeVariables TypeFamilies TypeOperators
   ghc-options: -Wall
   build-depends:
-      base >= 4.8 && < 4.10
-    , async >= 2.1 && < 2.2
-    , bytestring >= 0.10 && < 0.11
-    , text >= 1 && < 2
-    , servant-client >= 0.11 && < 0.13
-    , servant-client-core >= 0.11 && < 0.13
-    , haxl >= 0.5 && < 0.6
-    , http-client >= 0.5 && < 0.6
-    , http-types >= 0.9 && < 0.10
-    , http-media >= 0.6 && < 0.7
-    , hashable >= 1 && < 2
-    , exceptions >= 0.8 && < 0.9
-    , mtl >= 2.2 && < 2.3
-    , servant-client-haxl
+      QuickCheck >=2.8 && <2.10
     , aeson
-    , hspec > 2 && < 3
-    , QuickCheck >= 2.8 && < 2.10
-    , quickcheck-instances >= 0.3 && < 0.4
+    , async >=2.1 && <2.2
+    , base >=4.8 && <4.11
+    , bytestring >=0.10 && <0.11
+    , exceptions >=0.8 && <0.9
+    , hashable >=1 && <2
+    , haxl >=0.5 && <0.6
+    , hspec >2 && <3
+    , http-client >=0.5 && <0.6
+    , http-media >=0.6 && <0.8
+    , http-types >=0.9 && <0.10
+    , mtl >=2.2 && <2.3
+    , quickcheck-instances >=0.3 && <0.4
     , servant
+    , servant-client >=0.11 && <0.13
+    , servant-client-core >=0.11 && <0.13
+    , servant-client-haxl
     , servant-server
+    , text >=1 && <2
     , warp
   other-modules:
       Servant.Client.HaxlSpec
+      Paths_servant_client_haxl
   default-language: Haskell2010

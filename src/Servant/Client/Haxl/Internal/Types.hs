@@ -77,7 +77,8 @@ instance Haxl.DataSource u ServantHaxlRequest where
           response <- try $ HttpClient.runClientM
             (runRequest $ fmap Builder.lazyByteString request)
             (HttpClient.ClientEnv (manager requestState)
-                                  (baseUrl requestState))
+                                  (baseUrl requestState)
+                                  Nothing)
           case response of
             Left  e -> Haxl.putFailure rvar (e :: SomeException)
             Right r -> Haxl.putSuccess rvar r

@@ -1,8 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.21.2.
+-- This file has been generated from package.yaml by hpack version 0.20.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cd63fb838e9e40c5bbd0ed9fe7d10b6cbed9c2266a1e5d616047f2b2b9930feb
+-- hash: dd1b9c4d2b190fdb06f24ccb836c9a4fde616e25a05b504f4100a8672ad1c689
 
 name:           servant-client-haxl
 version:        0.0.0.0
@@ -49,7 +49,6 @@ library
       Servant.Client.Haxl.Internal
       Servant.Client.Haxl.Internal.Client
       Servant.Client.Haxl.Internal.Types
-      Servant.Flatten
   default-language: Haskell2010
 
 test-suite spec

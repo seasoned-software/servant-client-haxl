@@ -2,7 +2,5 @@ flags: {}
 extra-package-dbs: []
 packages:
 - '.'
-
-extra-deps:
-- servant-client-core-0.12
-resolver: nightly-2018-01-09
+extra-deps: []
+resolver: lts-11.1
